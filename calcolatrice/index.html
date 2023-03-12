@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Calcolatrice</title></head>
+    <body background="images/sfon.jpeg">
+        <style>
+            body{
+                background-repeat:space;
+                
+              background-size:100%;
+              background-color: black;
+
+            }
+            table, td,tr{
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            button{
+                width: 100%;;
+            }
+            label{
+                height: 100%;
+                width:100%;
+            }
+            h1{
+                text-align: center;
+                color: white;
+            }
+        </style>
+        <h1> CALCOLATRICE </h1>
+        <table align="center">
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="schermo">
+                </td>
+                
+            </tr>
+            <tr>
+                <td><button id="uno" onclick="aggiungi(1)">1</button></td>
+                <td><button id="due" onclick="aggiungi(2)">2</button></td>
+                <td><button id="tre" onclick="aggiungi(3)">3</button></td>
+                <td><button id="piu" onclick="aggiungi('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button id="quattro" onclick="aggiungi(4)">4</button></td>
+                <td><button id="cinque" onclick="aggiungi(5)">5</button></td>
+                <td><button id="sei" onclick="aggiungi(6)">6</button></td>
+                <td><button id="meno" onclick="aggiungi('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button id="sette" onclick="aggiungi(7)">7</button></td>
+                <td><button id="otto" onclick="aggiungi(8)">8</button></td>
+                <td><button id="nove" onclick="aggiungi(9)">9</button></td>
+                <td><button id="per" onclick="aggiungi('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button id="ce" onclick="aggiungi('ce')">CE</button></td>
+                <td><button id="due" onclick="aggiungi(0)">0</button></td>
+                <td><button id="c" onclick="aggiungi('c')">C</button></td>
+                <td><button id="diviso" onclick="aggiungi('/')">/</button></td>
+            </tr>
+            <tr>
+                <td colspan="4"><button id="uguale" onclick="calcola()" style="width:100%;">=</button></td>
+            </tr>
+
+        </table>
+        <script>
+            var risultato;
+            function aggiungi(agg){
+                var label=document.getElementById("schermo").value;
+
+        
+        if(agg == 'c'){
+            var tmp=label.textContent.substring(0, label.textContent.length - 1);
+            document.getElementById("schermo").value= tmp;
+        }
+        else if(agg=='ce'){
+            document.getElementById("schermo").value = ""
+        } else{
+            document.getElementById("schermo").value += agg;
+        }
+
+        }
+         function calcola(){
+            var espressione=document.getElementById("schermo").value;
+            var risultato=eval(espressione)
+            document.getElementById('schermo').value=risultato;
+            
+         }
+            
+        </script>
+    </body>
+</html>
