@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>form.azione</title>
+    <link rel="stylesheet" href="mystyle.css">
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form name="registrazione" onsubmit="return validaForm();">
+        <table>
+            <tr>
+                <td class="informazioni">cognome:</td>
+                <td> <input type="text" name="cognome" size="30" maxlength="30"></td>
+            </tr>
+            <tr>
+                <td class="informazioni">nome:</td>
+                <td class="inputs"> <input type="text" name="nome" size="30px" maxlength="30px"></td>
+            </tr>
+            <tr>
+                <td class="informazioni">matricola:</td>
+                <td class="inputs"> <input type="text" name="matricola" size="30px" maxlength="30px"></td>
+            </tr>
+            <tr>
+                <td class="informazioni">regione:</td>
+                <td class="inputs"> <select name="regione">
+                        <option value="nessuna" selected></option>
+                        <option value="valdaosta">Val D'Aosta</option>
+                        <option value="piemonte">Piemonte</option>
+                        <option value="lombrardia">Lombrardia</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="informazioni">email:</td>
+                <td class="inputs"> <input type="text" name="email" size="30px" maxlength="30px"></td>
+            </tr>
+            <tr>
+                <td class="informazioni">telefono:</td>
+                <td class="inputs"> <input type="text" name="telefono" size="30px" maxlength="30px"></td>
+            </tr>
+
+        </table>
+        richieste particolari:
+        <br>
+        <textarea name="richieste" cols="60" rows="12"></textarea></td>
+
+        <br>
+        <input type="submit" value="invia!!">
+        <input type="reset" value="reset!!">
+
+    </form>
+
+    <p id="feedback">-</p>
+</body>
+
+</html>
