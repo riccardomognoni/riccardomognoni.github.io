@@ -25,6 +25,9 @@ class Calcolatrice {
             } else if (this.operazione == "/") {
                 this.risultato = this.num1 / num2
             }
+            else if (this.operazione ==null) {
+                this.risultato = l.innerHTML;
+            }
             if (this.risultato == "NaN") {
                 l.innerHTML = 0;
             } else {
