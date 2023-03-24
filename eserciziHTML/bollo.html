@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="script/scriptBollo.js"></script>
+</head>
+
+<body>
+    <form name="bollo" onsubmit=" return calcolaBollo();">
+        <h1>Calcola il bollo del tuo veicolo</h1>
+        Inserisci tipo di veicolo: <br>
+        <select name="veicolo" id="veicolo">
+            <option value="nessuna" selected></option>
+            <option value="1">auto</option>
+            <option value="2">moto</option>
+
+        </select>
+
+        <br>
+        Inserisci CV del mezzo:<br>
+        <input type="text" name="cavalli">
+        <br>
+        Inserisci classe inquinante del mezzo: <br>
+        <select name="classeI" id="classeI">
+            <option value="nessuna" selected></option>
+            <option value="0">EURO0</option>
+            <option value="1">EURO1</option>
+            <option value="2">EURO2</option>
+            <option value="3">EURO3</option>
+            <option value="4">EURO4</option>
+            <option value="5">EURO5</option>
+        </select>
+        <br><br>
+        <input type="submit" value="calcola">
+    </form>
+
+
+    <p id="Bollo">Bollo: </p>
+    <p id="immagine"></p>
+
+
+
+    <p><a href="index.html"> <img src="images/home.png" width="7%" height="7%"></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
