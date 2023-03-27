@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Album Fotografico</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    
+    <body>
+        <form name="album">
+            <h1>ALBUM FOTOGRAFICO</h1>
+        
+            Scegliere l'album del cibo che preferisci: 
+            <select name="scegliCibo" onchange="return caricaAlbum();">
+              <option value="nessuna" selected></option>
+              <option value="1" > Pizza</option>
+              <option value="2" > Verdure</option>
+              <option value="3" > hamburger</option>
+            </select>
+            <br><br><br><br>
+          <table>
+              <tr>
+                  <td id="i1"> <a href="images/default.jpg" target="_blank"><img src="images/default.jpg"></a></td>
+                  <td id="i2"> <a href="images/default.jpg" target="_blank"><img src="images/default.jpg"></a></td>
+                  <td id="i3"> <a href="images/default.jpg" target="_blank"><img src="images/default.jpg"></a></td>
+            
+              </tr>
+              <tr>
+                <td id="desc1">descrizione</td>
+                <td id="desc2">descrizione</td>
+                <td id="desc3">descrizione</td>
+            </tr>
+            
+          </table>
+      
+  
+        
+        </form>
+       
+    </body>
+</html>

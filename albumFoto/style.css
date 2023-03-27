@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+}
+body{
+    text-align: center;
+    background-color: antiquewhite;
+}
+table{
+    width: 50%;
+    margin-left: 25%;
+}
+td{
+    border: 1px solid;
+    border-collapse:collapse;
+    width: 33%;
+}
+tr{
+    height: 10%;
+}
+img{
+    width: 100%;
+    height:300px;
+}
