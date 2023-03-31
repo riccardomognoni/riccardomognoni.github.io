@@ -1,0 +1,26 @@
+body{
+    background-color: brown;
+}
+h1{
+    text-align: center;
+    font-size: 48pt;
+    margin-top: 1%;
+}
+table{
+    width:50%;
+    margin-left: 8%;
+}
+img{
+    width: 250px;
+    height:250px;
+
+}
+#crediti{
+    font-size: 25pt;
+}
+.spin{
+    background-color: brown;
+    width: 100px;
+    height:230px;
+
+}

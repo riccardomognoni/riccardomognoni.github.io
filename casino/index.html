@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script>
+            casino=new Casino();
+        </script>
+    </head>
+    <body>
+        <h1>Casinò</h1>
+        <div align="center">
+            <table>
+                <tr>
+                    <td><img src="images/zero.png"></td>
+                    <td><img  src="images/uno.png"></td>
+                    <td><img   src="images/due.png"></td>
+                    <td><button onclick="casino.spin()"><img class="spin" src="images/spin.jpg"></td>
+                </tr>
+                
+            </table>
+            <table>
+                <tr>
+                    <td id="crediti">Crediti: 10</td>
+                    <td><button onclick="casino.incassa()">INCASSA</button></td>
+                </tr>
+            </table>
+         
+        </div>
+    </body>
+</html>
