@@ -5,17 +5,6 @@ class CEvento{
         this.completata=false;
     }
 
-    visualizza(){
-      alert(this.data+" "+this.attivita+" "+this.completata);
-    }
-
-    getDate(){
-        return this.data;
-    }
-    
-    getEvento(){
-        return this.attivita;
-    }
 
     setCompletamento(){
        this.completata=!this.completata;
