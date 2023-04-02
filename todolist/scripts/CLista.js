@@ -18,6 +18,7 @@ class CLista {
             let attivit = new CEvento(date.getTime(), att.value);
             this.lista.push(attivit);
             this.ordinaPerData();
+            this.rimuoviGrafica();
             this.size++;
             for (let i = 0; i < this.size; i++) {
                 this.aggiungiTr(this.lista[i].attivita, i);
@@ -85,7 +86,7 @@ class CLista {
                 }
             }
         }
-        this.rimuoviGrafica();
+     
        
     }
 }
