@@ -18,11 +18,7 @@ class CEvento{
     }
 
     setCompletamento(){
-        if(this.completata===false){
-            this.completata=true;
-        } else  if(this.completata===true){
-            this.completata=false;
-        }
+       this.completata=!this.completata;
     }
 
 
