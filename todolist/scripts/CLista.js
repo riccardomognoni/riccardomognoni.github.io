@@ -6,14 +6,14 @@ class CLista {
 
     //funzione per aggiungere un elemento di tipo evento all'interno del vettore lista
     add() {
-       
-        if(document.getElementsByTagName("input")[0].value==""){
-            alert("inserire data evento");
+       let data=document.getElementsByTagName("input")[0].value;
+        let att = document.getElementById("event");
+        if(data=="" || att.value==""){
+            alert("inserire data e/o descrizione dell'evento");
             return false;
         }
         else{
-            let date = new Date(document.getElementsByTagName("input")[0].value);
-            let att = document.getElementById("event");
+            let date = new Date(data);
             //evento con la data e l'attività
             let attivit = new CEvento(date.getTime(), att.value);
             this.lista.push(attivit);
