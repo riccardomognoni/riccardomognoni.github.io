@@ -12,7 +12,7 @@ class CLista {
             return false;
         }
         else{
-              let date = new Date(document.getElementsByTagName("input")[0].value);
+            let date = new Date(document.getElementsByTagName("input")[0].value);
             let att = document.getElementById("event");
             //evento con la data e l'attività
             let attivit = new CEvento(date.getTime(), att.value);
