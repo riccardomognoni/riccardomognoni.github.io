@@ -12,16 +12,17 @@ class CLista {
             return false;
         }
         else{
-            let date = new Date(document.getElementsByTagName("input")[0].value);
-            let att = document.getElementById("event").value;
+              let date = new Date(document.getElementsByTagName("input")[0].value);
+            let att = document.getElementById("event");
             //evento con la data e l'attività
-            let attivit = new CEvento(date.getTime(), att);
+            let attivit = new CEvento(date.getTime(), att.value);
             this.lista.push(attivit);
             this.ordinaPerData();
             this.size++;
             for (let i = 0; i < this.size; i++) {
                 this.aggiungiTr(this.lista[i].attivita, i);
             }
+            att.value="";
         }
     }
 
