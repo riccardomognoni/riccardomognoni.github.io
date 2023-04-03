@@ -8,12 +8,18 @@ class CLista {
     add() {
        let data=document.getElementsByTagName("input")[0].value;
         let att = document.getElementById("event");
+        let date = new Date(data);
+        let d=new Date();
         if(data=="" || att.value==""){
             alert("inserire data e/o descrizione dell'evento");
             return false;
         }
-        else{
-            let date = new Date(data);
+         else if(date.getTime()-d.getTime()<=0){
+            alert("impossibile inserire un evento in data precedente a quella odierna");
+            return false;
+        }
+         else{
+            
             //evento con la data e l'attività
             let attivit = new CEvento(date.getTime(), att.value);
             this.lista.push(attivit);
@@ -53,10 +59,10 @@ class CLista {
         this.lista[i].setCompletamento();
         let doc = document.getElementsByClassName("Activity");
         if(this.lista[i].completata==true){
-            doc[i].innerHTML += ": completata";
+            doc[i].style.textDecoration="line-through";
         }
         else{
-            doc[i].innerHTML =this.lista[i].attivita;
+            doc[i].style.textDecoration="none";
         }
        
     }
@@ -67,7 +73,11 @@ class CLista {
         this.size--;
         this.rimuoviGrafica();
         for (let i = 0; i < this.size; i++) {
+            if(this.lista[i].completata){
+                this.lista[i].setCompletamento();
+            }
             this.aggiungiTr(this.lista[i].attivita, i);
+           
         }
     }
 
