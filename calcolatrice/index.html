@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="Calcolatrice.js"></script> 
+    <script>
+        function aggiungi(numero) {
+
+var l = document.getElementById("schermo");
+
+
+if (numero == "ce") {
+    l.innerHTML = ""
+} else if (numero == "c") {
+
+    l.innerHTML = l.textContent.substring(0, l.textContent.length - 1);
+} else {
+    l.innerHTML += numero;
+
+}
+}
+
+    </script>
+    <script>
+        const   calcolatrice=new Calcolatrice();
+    </script>
+   
+</head>
+
+<body b>
+
+    <h1> CALCOLATRICE </h1>
+    <table align="center">
+        <tr style="border: 5px solid;">
+            <td colspan="4" id="display">
+                <label for="lname" id="schermo"></label><br>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><button id="ce" onclick="aggiungi('ce')" style="width: 99%;">CE</button></td>
+            <td colspan="1"> <button id="c" onclick="aggiungi('c')" style="width: 99%;">C</button></td>
+            <td><button id="piu" onclick="calcolatrice.somma()">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="uno" onclick="aggiungi(1)">1</button></td>
+            <td><button id="due" onclick="aggiungi(2)">2</button></td>
+            <td><button id="tre" onclick="aggiungi(3)">3</button></td>
+            <td><button id="meno" onclick="calcolatrice.sottrazione()">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="quattro" onclick="aggiungi(4)">4</button></td>
+            <td><button id="cinque" onclick="aggiungi(5)">5</button></td>
+            <td><button id="sei" onclick="aggiungi(6)">6</button></td>
+            <td><button id="per" onclick="calcolatrice.moltiplicazione()">x</button></td>
+        </tr>
+        <tr>
+            <td><button id="sette" onclick="aggiungi(7)">7</button></td>
+            <td><button id="otto" onclick="aggiungi(8)">8</button></td>
+            <td><button id="nove" onclick="aggiungi(9)">9</button></td>
+            <td><button id="diviso" onclick="calcolatrice.divisione()">/</button></td>
+        </tr>
+        <tr>
+
+            <td><button onclick="aggiungi('.')">.</button></td>
+            <td><button id="due" onclick="aggiungi(0)">0</button></td>
+            <td><button id="due" onclick="calcolatrice.cambiaSegno()">+/-</button></td>
+            <td colspan="4"><button id="uguale" onclick="calcolatrice.calcola()">=</button></td>
+        </tr>
+
+
+    </table>
+   
+</body>
+
+</html>
