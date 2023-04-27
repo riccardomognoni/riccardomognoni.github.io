@@ -68,7 +68,7 @@ class Campo {
             for(var dr=r-1;dr<=r+1;dr++)
             for(var dc=c-1;dc<=c+1;dc++)
                 if(dc >= 0 && dr >= 0 && dc < this.n && dr < this.n)
-                    controlla(dr,dc);
+                    this.controlla(dr,dc);
 
         } else if (this.campo[r][c].mina) {
             // qui mettiamo la mina
