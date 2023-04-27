@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="ListaPizze.js"></script>
+    <script>
+        const pizze=new ListaPizze();
+
+        $(document).ready(function(){
+            $('.grid-item').click(function(){
+                pizze.aggiungi($(this).attr("data-pizza"));
+            });
+        });
+    </script>
+</head>
+
+
+<body>
+    <h1>Pizzeria Da Michele</h1>
+
+    <table>
+        <tr>
+            <td>
+                <div class="grid-container">
+                    <div class="grid-item" data-pizza="Margherita">Margherita</div>
+                    <div class="grid-item" data-pizza="Prosciutto">Prosciutto </div>
+                    <div class="grid-item" data-pizza="Patatine">Patatine</div>
+                    <div class="grid-item" data-pizza="Wurstel">Wurstel </div>
+                    <div class="grid-item" data-pizza="Rucola">Rucola </div>
+                    <div class="grid-item" data-pizza="Diavola">Diavola</div>
+                </div>
+
+
+            </td>
+            <td>
+                <img src="images/pizzaiolo.png" alt="">
+            </td>
+            <td>
+                <p>Lista:</p>
+                <table id="listaPizze">
+                </table>
+                <button onclick="pizze.reset()">RESET</button>
+            </td>
+        </tr>
+       
+    </table>
+
+    <p>
+
+    </p>
+
+
+
+
+
+</body>
+
+</html>
