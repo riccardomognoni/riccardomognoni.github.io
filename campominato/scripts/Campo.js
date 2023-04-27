@@ -10,9 +10,10 @@ class Campo {
 
     }
 
-     reset(){
+    reset(){
         location.reload();
     }
+
     creaCampo() {
         $('#numMine').text("mine: " + this.mine);
         //crea la tabella
