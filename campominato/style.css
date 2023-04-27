@@ -1,7 +1,7 @@
 .display{
     display: grid;
     grid-template-columns: auto auto auto;
-    width: 600px;
+    width: 550px;
 }
 .disp-item{
     border: 1px solid black;
