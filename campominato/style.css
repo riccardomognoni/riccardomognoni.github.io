@@ -27,6 +27,7 @@
 	vertical-align: middle;
 }
 .cella i {
+	border: 1px solid black;
 	position: absolute;
 	transform: translate(50%,-50%);
 	top: 50%;
