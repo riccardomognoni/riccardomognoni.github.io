@@ -21,7 +21,7 @@ function generaCampo(){
    }
 
    
-        grandezza=(dimCampo*60);
+        grandezza=(dimCampo*55);
 
         $('#griglia').css("width", + grandezza+"px");
         $('#griglia').css("height", $('#griglia').width() + "px");
@@ -59,18 +59,18 @@ function generaCampo(){
         }
     });
 
-    $("#griglia").on('contextmenu', function(event){
+    $("#griglia").on('contextmenu', function(e){
 
-         event.preventDefault();
-            let clickedElement = $(event.target);
+         e.preventDefault();
+            let clickedElement = $(e.target);
         
          //prendo riga e colonna
         
-        let rClick = parseInt(clickedElement.attr("data-row"));
+        let r = parseInt(clickedElement.attr("data-row"));
         
-         let cClick = parseInt(clickedElement.attr("data-col"));
+         let c = parseInt(clickedElement.attr("data-col"));
         
-     campo.flag(rClick, cClick);
+     campo.flag(r, c);
         
     });
   
