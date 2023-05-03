@@ -61,10 +61,17 @@ class Campo {
         if (this.campo[r][c].aperta)
             return true;
 
+            if(  this.campo[r][c].flag==true){
+                this.campo[r][c].flag=false;
+                $('.cella[data-row=' + r + '][data-col=' + c + ']').removeClass("bandiera");
+                this.mine++;
+                $('#numMine').text("mine: "+this.mine);
+            }
         this.campo[r][c].aperta = true;
         this.cAperte++;
 
         $('.cella[data-row=' + r + '][data-col=' + c + ']').html(this.campo[r][c].cont ? this.campo[r][c].cont : "&nbsp;");
+        
         $('.cella[data-row=' + r + '][data-col=' + c + ']').addClass("aperta");
 
       
@@ -99,5 +106,31 @@ class Campo {
 
 
 
+
+    flag(r, c){
+
+        if(this.gioco==true){
+            if (this.campo[r][c].aperta)
+            return true;
+    
+    
+            this.campo[r][c].flag =   !this.campo[r][c].flag;
+    
+            if(  this.campo[r][c].flag==true){
+            $('.cella[data-row=' + r + '][data-col=' + c + ']').addClass("bandiera");
+            this.mine--;
+            }
+            else{
+                $('.cella[data-row=' + r + '][data-col=' + c + ']').removeClass("bandiera");
+                this.mine++;
+            }
+    
+            $('#numMine').text("mine: "+this.mine);
+        }
+        }
+        
+     
 }
+
+
 

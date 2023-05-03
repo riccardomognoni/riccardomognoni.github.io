@@ -11,50 +11,38 @@
 
 
 <body>
-    <h1 >Campo Minato</h1>
-   
+    <h1>Campo Minato</h1>
+
     <div align="center">
-        dimensione campo: <select  id="grandezzaCampo">
-            <option value="10" selected>10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            </select>
-        
-           Numero mine: <select  id="scegliMine">
-                <option value="10" selected>10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-                <option value="30">30</option>
-                </select>
-        
-        
-            <button onclick="generaCampo()">Genera Campo</button>
+        Difficoltà: <select id="difficoltà">
+            <option value="1" selected>Facile</option>
+            <option value="2">Medio</option>
+            <option value="3">Difficile</option>
+            <option value="4">Impossibile</option>
+        </select>
+
+
+        <button onclick="generaCampo()">Genera Campo</button>
+        <br>
+        <div align="center" class="display">
+            <div id="numMine" class="disp-item"></div>
+            <div class="disp-item" ><button id="reset">reset</button></div>
+            <div class="disp-item">tempo</div>
+        </div>
+        <div id="stato"></div>
     </div>
-   
-        <table align="center">
-            <tr>
-                <td>
-                    <div class="display">
-                        <div id="numMine" class="disp-item"></div>
-                        <div class="disp-item" class="reset"><button onclick="reset()">reset</button></div>
-                        <div class="disp-item">tempo</div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="griglia"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="stato"></div>
-                </td>
-            </tr>
-        </table>
-        
+
+    
+
+
+    <table align="center">
+        <tr>
+            <td>
+                <div id="griglia"></div>
+            </td>
+        </tr>
+    </table>
+
 </body>
 
 </html>
