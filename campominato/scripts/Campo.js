@@ -7,6 +7,8 @@ class Campo {
         this.campo = [];
         this.cAperte = 0;
         this.gioco = true;
+        this.mineScoperte=0;
+        this.contatoreMine=min;
 
     }
 
@@ -64,8 +66,8 @@ class Campo {
             if(  this.campo[r][c].flag==true){
                 this.campo[r][c].flag=false;
                 $('.cella[data-row=' + r + '][data-col=' + c + ']').removeClass("bandiera");
-                this.mine++;
-                $('#numMine').text("mine: "+this.mine);
+                 this.contatoreMine++;
+                 this.aggiornaDisplayMine();
             }
         this.campo[r][c].aperta = true;
         this.cAperte++;
@@ -99,6 +101,9 @@ class Campo {
             for (let c = 0; c < this.n; c++)
                 if (this.campo[r][c].mina) {
                     this.campo[r][c].aperta = true;
+                    if(this.campo[r][c].flag==true){
+                        $('.cella[data-row=' + r + '][data-col=' + c + ']').removeClass("bandiera");
+                    }
                     $('.cella[data-row=' + r + '][data-col=' + c + ']').html('<i class="fa fa-bomb"></i>');
                     $('.cella[data-row=' + r + '][data-col=' + c + ']').addClass("mina");
                 }
@@ -108,28 +113,51 @@ class Campo {
 
 
     flag(r, c){
-
+    
         if(this.gioco==true){
             if (this.campo[r][c].aperta)
             return true;
     
     
-            this.campo[r][c].flag =   !this.campo[r][c].flag;
+         
+
+            this.campo[r][c].flag =!this.campo[r][c].flag;
     
-            if(  this.campo[r][c].flag==true){
-            $('.cella[data-row=' + r + '][data-col=' + c + ']').addClass("bandiera");
-            this.mine--;
+
+            if(this.contatoreMine>0){
+                if(  this.campo[r][c].flag==true){
+                    $('.cella[data-row=' + r + '][data-col=' + c + ']').addClass("bandiera");
+                    this.contatoreMine--;
+                    
+                    
             }
-            else{
+            if(this.campo[r][c].mina){
+                this.mineScoperte++;
+            }
+
+
+
+            }
+            if(  this.campo[r][c].flag==false){
                 $('.cella[data-row=' + r + '][data-col=' + c + ']').removeClass("bandiera");
-                this.mine++;
+                this.contatoreMine++;
             }
-    
-            $('#numMine').text("mine: "+this.mine);
+
+            if(this.mine==this.mineScoperte){
+                $('#stato').text("Hai vinto!");
+                alert("Hai Vinto!");
+                this.scopriMine();
+                this.gioco=false;
+            }
+            this.aggiornaDisplayMine();
+
+           
         }
         }
         
-     
+     aggiornaDisplayMine(){
+        $('#numMine').text("mine: "+this.contatoreMine);
+     }
 }
 
 

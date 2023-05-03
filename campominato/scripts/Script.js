@@ -6,7 +6,7 @@ function generaCampo(){
    let dim=0;
    if(diff==1){
     dimCampo=25;
-    mine=10;
+    mine=15;
    } else  if(diff==2){
     dimCampo=15;
     mine=20;
@@ -47,10 +47,12 @@ function generaCampo(){
                 // ha perso
                 campo.gioco = false;
                 $('#stato').html("Hai perso!");
+                alert("Hai Perso!");
             } else if (campo.n * campo.n - campo.cAperte <= campo.mine) {
                 // hai vinto
                 campo.gioco = false;
                 $('#stato').html("Hai vinto!");
+                alert("Hai Vinto!");
             }
             if (!campo.gioco)
                 campo.scopriMine();
