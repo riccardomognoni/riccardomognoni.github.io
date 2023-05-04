@@ -67,7 +67,6 @@ class Campo {
                 this.campo[r][c].flag=false;
                 $('.cella[data-row=' + r + '][data-col=' + c + ']').removeClass("bandiera");
                  this.contatoreMine++;
-                   this.mineScoperte--;
                  this.aggiornaDisplayMine();
             }
         this.campo[r][c].aperta = true;
@@ -132,8 +131,11 @@ class Campo {
                     
                     
             }
-            if(this.campo[r][c].mina){
+            if(this.campo[r][c].mina && this.campo[r][c].flag){
                 this.mineScoperte++;
+            }
+            else{
+                  this.mineScoperte--;
             }
 
 
