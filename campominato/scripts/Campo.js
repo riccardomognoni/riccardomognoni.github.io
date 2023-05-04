@@ -133,6 +133,8 @@ class Campo {
             }
             if(this.campo[r][c].mina && this.campo[r][c].flag){
                 this.mineScoperte++;
+            }else  if(this.campo[r][c].mina && !this.campo[r][c].flag){
+                this.mineScoperte--;
             }
             
 
