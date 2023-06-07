@@ -75,9 +75,9 @@ class Campo {
         $('.cella[data-row=' + r + '][data-col=' + c + ']').html(this.campo[r][c].cont ? this.campo[r][c].cont : "&nbsp;");
         $('.cella[data-row=' + r + '][data-col=' + c + ']').addClass("aperta");
         
-        if( campo[r][c].cont ) 
-		$('.cella[data-row='+r+'][data-col='+c+']').addClass("colore-" + (campo[r][c].cont<4?campo[r][c].cont:4));
-
+        if( campo[r][c].cont ) {
+		$('.cella[data-row='+r+'][data-col='+c+']').addClass("colore-" + (campo[r][c].cont<4 ? campo[r][c].cont:4));
+	}
       
         if (!this.campo[r][c].mina && !this.campo[r][c].cont) {
 
