@@ -21,7 +21,7 @@ function generaCampo(){
    }
 
    
-        grandezza=(dimCampo*55);
+        grandezza=(dimCampo*60);
 
         $('#griglia').css("width", + grandezza+"px");
         $('#griglia').css("height", $('#griglia').width() + "px");
