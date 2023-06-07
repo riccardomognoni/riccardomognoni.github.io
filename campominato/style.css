@@ -5,6 +5,9 @@
 	background-color: white;
 	margin: 10px;
 }
+h1{
+text-align: center;
+}
 .disp-item{
     border: 1px solid black;
 }
