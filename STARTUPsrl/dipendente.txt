@@ -1,0 +1,3 @@
+dataNascita;dataAssunzione;numOreSett;pianoUfficio;numPostazioni;nome;cognome;indirizzo;nomeUfficio;siglaLocale;nomeResponsabile;
+07/07/2005;28/09/2023;33;3;7;Riccardo;Mognoni;Via Crotto 21/c, Cantù;Sviluppo;B12;Luca Bertiato;
+
